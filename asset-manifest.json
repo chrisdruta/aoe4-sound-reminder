@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/aoe4-sound-reminder/static/css/main.073c9b0a.css",
-    "main.js": "/aoe4-sound-reminder/static/js/main.e280163b.js",
+    "main.js": "/aoe4-sound-reminder/static/js/main.2dca458d.js",
     "static/js/787.ec35c71d.chunk.js": "/aoe4-sound-reminder/static/js/787.ec35c71d.chunk.js",
     "index.html": "/aoe4-sound-reminder/index.html",
     "main.073c9b0a.css.map": "/aoe4-sound-reminder/static/css/main.073c9b0a.css.map",
-    "main.e280163b.js.map": "/aoe4-sound-reminder/static/js/main.e280163b.js.map",
+    "main.2dca458d.js.map": "/aoe4-sound-reminder/static/js/main.2dca458d.js.map",
     "787.ec35c71d.chunk.js.map": "/aoe4-sound-reminder/static/js/787.ec35c71d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.e280163b.js"
+    "static/js/main.2dca458d.js"
   ]
 }
