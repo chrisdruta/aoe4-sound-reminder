@@ -30,6 +30,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>AoE4 Sound Reminder-er</h1>
         <img src="./wololo.png" className="App-logo" alt="logo" style={{animationPlayState: playInterval ? "running" : "paused"}} />
         <br />
         <p>
