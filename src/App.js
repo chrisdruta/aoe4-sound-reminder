@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="/wololo.png" className="App-logo" alt="logo" style={{animationPlayState: playInterval ? "running" : "paused"}} />
+        <img src="./wololo.png" className="App-logo" alt="logo" style={{animationPlayState: playInterval ? "running" : "paused"}} />
         <br />
         <p>
           Volume: {volume}
