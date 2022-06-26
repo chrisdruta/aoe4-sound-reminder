@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.463d1cac.js",
-    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.463d1cac.js.map": "/static/js/main.463d1cac.js.map",
-    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/aoe4-sound-reminder/static/css/main.073c9b0a.css",
+    "main.js": "/aoe4-sound-reminder/static/js/main.4f29382a.js",
+    "static/js/787.28cb0dcd.chunk.js": "/aoe4-sound-reminder/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/aoe4-sound-reminder/index.html",
+    "main.073c9b0a.css.map": "/aoe4-sound-reminder/static/css/main.073c9b0a.css.map",
+    "main.4f29382a.js.map": "/aoe4-sound-reminder/static/js/main.4f29382a.js.map",
+    "787.28cb0dcd.chunk.js.map": "/aoe4-sound-reminder/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.463d1cac.js"
+    "static/js/main.4f29382a.js"
   ]
 }
