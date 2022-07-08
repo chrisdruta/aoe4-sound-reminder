@@ -1,37 +1,48 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+
+import logo from './wololo.png';
+import wololo from './wololo.mp3';
+import zen from './zen.mp3';
 
 import './App.css';
 
-let wololo = new Audio("./wololo.mp3");
-let timer = null;
+const audioClips = [new Audio(wololo), new Audio(zen)];
 
 function App() {
-
-  const [playInterval, setPlayInterval] = useState(false);
+  const [clipIndex, setClipIndex] = useState(0);
+  const [play, setPlay] = useState(false);
   const [intervalTime, setIntervalTime] = useState(20);
-  const [volume, setVolume] = useState(100);
+  const [volume, setVolume] = useState(70);
+
+  const audioRef = useRef(audioClips[clipIndex]);
+  const timerRef = useRef();
 
   useEffect(() => {
-    wololo.volume = volume / 100.0;
+    audioRef.current.volume = volume / 100.0;
   }, [volume]);
 
   useEffect(() => {
-    if (playInterval) {
-      clearInterval(timer);
-      wololo.play();
-      timer = setInterval(() => {wololo.play()}, intervalTime * 1000);
-    } else {
-      if (timer) {
-        clearInterval(timer);
-      }
+    if (play) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+      audioRef.current = audioClips[clipIndex];
+
+      audioRef.current.play();
+      clearInterval(timerRef.current);
+      timerRef.current = setInterval(() => {audioRef.current.play()}, intervalTime * 1000);
+    } else if (timerRef.current) {
+      clearInterval(timerRef.current);
     }
-  }, [playInterval, intervalTime]);
+  }, [play, intervalTime, clipIndex]);
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>AoE4 Sound Reminder-er</h1>
-        <img src="./wololo.png" className="App-logo" alt="logo" style={{animationPlayState: playInterval ? "running" : "paused"}} />
+        <img src={logo} className="App-logo" alt="logo"
+          style={{pointerEvents: "all", animationPlayState: play ? "running" : "paused"}}
+          onClick={() => setClipIndex((clipIndex + 1) % (audioClips.length))}
+        />
         <br />
         <p>
           Volume: {volume}
@@ -47,7 +58,7 @@ function App() {
             setIntervalTime(e.target.value);
           }}/>
         </p>
-        <button onClick={() => setPlayInterval(!playInterval)}>{playInterval ? "Stop" : "Start"}</button>
+        <button onClick={() => setPlay(!play)}>{play ? "Stop" : "Start"}</button>
       </header>
     </div>
   );
